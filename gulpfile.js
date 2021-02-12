@@ -1,7 +1,6 @@
 /**
  * Created by meitaiqiao on 2017/3/15.
  */
-
 //
 // var gulp = require('gulp');
 // var scp = require('gulp-scp2');
@@ -25,13 +24,19 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var ftp = require('gulp-ftp');
 
+
+
+
+
+
+
 gulp.task('default', function () {
   return gulp.src('ceshi/**/*')
     .pipe(ftp({
       host: '211.157.179.215',
       port: '21522',
       user: 'root',
-      pass: 'e-eduspace@ADMIN.',
+      pass: 'e-eduspace',
       remotePath: '/opt/tomcat-7777-keepMark/webapps'
     }))
     // you need to have some kind of stream after gulp-ftp to make sure it's flushed
